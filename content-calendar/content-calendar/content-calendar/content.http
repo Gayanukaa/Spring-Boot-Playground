@@ -1,0 +1,38 @@
+### Find all content
+GET http://localhost:3000/api/content
+
+### Get content by ID
+GET http://localhost:3000/api/content
+
+### Create new Content
+POST http://localhost:3000/api/content
+Content-Type: application/json
+
+{
+    "id": 2,
+    "title": "Blog Post 2",
+    "desc": "My second blog post",
+    "status": "IDEA",
+    "contentType": "ARTICLE",
+    "dateCreated": "2024-03-15T08:46:36.1252422",
+    "dateUpdated": null,
+    "url": ""
+}
+
+### Update existing Content
+PUT http://localhost:3000/api/content/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Blog Post 1",
+  "desc": "My first blog post",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2024-03-15T08:46:36.1252422",
+  "dateUpdated": "2024-03-15T08:46:36.1252422",
+  "url": "http://localhost:3000/first-blog-post"
+}
+
+### Delete by Id
+DELETE http://localhost:3000/api/content/2
