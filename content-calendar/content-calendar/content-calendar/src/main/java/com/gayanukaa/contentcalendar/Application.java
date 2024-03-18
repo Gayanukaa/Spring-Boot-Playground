@@ -20,9 +20,11 @@ public class Application {
 		//Essentially, beans are Java objects that are instantiated, assembled, and managed by Spring,
 		//rather than being created manually by the application developer.
 		//Define a bean on a method that returns some class
-		ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
+		/*ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
 		RestTemplate restTemplate = (RestTemplate) context.getBean("restTemplate");
-		System.out.println(restTemplate);
+		System.out.println(restTemplate);*/
+
+		SpringApplication.run(Application.class, args);
 	}
 
 }
