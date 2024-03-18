@@ -5,6 +5,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
+//this file and package are created for
+// file - to define beans
+// package - to keep all the configuration classes
 @Configuration // When to define a bean it is inside a configuration class
 public class MyWebConfig {
 

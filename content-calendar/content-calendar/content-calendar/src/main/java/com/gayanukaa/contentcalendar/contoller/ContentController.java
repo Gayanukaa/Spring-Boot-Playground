@@ -2,14 +2,11 @@ package com.gayanukaa.contentcalendar.contoller;
 
 import com.gayanukaa.contentcalendar.model.Content;
 import com.gayanukaa.contentcalendar.repository.ContentColllectionRepository;
-import jakarta.annotation.PostConstruct;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/content") //on a class level
@@ -62,6 +59,9 @@ public class ContentController {
         repository.save(content);
     }
 
+
+    //this function does the same thing as the create function, but it is used to update the content
+    //but old content should be there
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{id}")
     public void update(@RequestBody Content content, @PathVariable Integer id) {
@@ -71,6 +71,8 @@ public class ContentController {
         repository.save(content);
     }
 
+
+    //delete a piece of content
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Integer id) {

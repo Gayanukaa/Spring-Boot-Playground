@@ -5,15 +5,18 @@ import com.gayanukaa.contentcalendar.model.Status;
 import com.gayanukaa.contentcalendar.model.Type;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Repository;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+
+//Repository - to indicate that this class is responsible for talking to a database
+//Spring will create an instance of this class and manage it in the application context
+//This is a bean
 @Repository
 public class ContentColllectionRepository {
-    //Not talking to a database yet
+    //Not talking to a database yet - not currently persisting data
     //Keep a collection of pieces of content in memory
 
     private final List<Content> contentList = new ArrayList<>();

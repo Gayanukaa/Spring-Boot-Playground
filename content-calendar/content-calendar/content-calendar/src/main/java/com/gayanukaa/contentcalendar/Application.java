@@ -5,8 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Arrays;
 
+//This is the entry point of the application
+//@SpringBootApplication - tells Spring Boot to start adding beans based on classpath settings, other beans, and various property settings.
 @SpringBootApplication
 public class Application {
 
