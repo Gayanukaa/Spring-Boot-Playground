@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:alpine  #lightwieght version of postgres
+    ports:
+      - "5432:5432"
+    environment:
+        POSTGRES_USERNAME: postgres-test1
+        POSTGRES_PASSWORD: password
+
+#this is a trail to set up a docker container
+#need to have docker desktop installed and open to execute above file

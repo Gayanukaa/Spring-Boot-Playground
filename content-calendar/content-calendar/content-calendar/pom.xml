@@ -38,10 +38,23 @@
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 
-		<dependency>
+		<!--
+		nothing done to connect to the database, just added the dependency
+		spring boot autoconfiguration sees in this pom - starter jdbc and h2 database
+		spring boot will automatically configure the database connection behind the scenes
+		it makes the data source connection. Can customize or override the default configuration
+		-->
+
+		<!--<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
+		</dependency>-->
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.23</version>
 		</dependency>
 	</dependencies>
 
