@@ -61,6 +61,13 @@
 			<artifactId>postgresql</artifactId>
 			<version>42.2.23</version>
 		</dependency>-->
+
+		<!--Configuring the Annotation Processor-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 
 	<build>

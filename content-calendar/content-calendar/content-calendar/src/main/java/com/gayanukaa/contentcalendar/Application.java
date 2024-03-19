@@ -1,5 +1,6 @@
 package com.gayanukaa.contentcalendar;
 
+import com.gayanukaa.contentcalendar.config.ContentCalendarProperties;
 import com.gayanukaa.contentcalendar.model.Content;
 import com.gayanukaa.contentcalendar.model.Status;
 import com.gayanukaa.contentcalendar.model.Type;
@@ -7,6 +8,7 @@ import com.gayanukaa.contentcalendar.repository.ContentRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
@@ -16,6 +18,7 @@ import java.time.LocalDateTime;
 
 //This is the entry point of the application
 //@SpringBootApplication - tells Spring Boot to start adding beans based on classpath settings, other beans, and various property settings.
+@EnableConfigurationProperties(ContentCalendarProperties.class)
 @SpringBootApplication
 public class Application {
 

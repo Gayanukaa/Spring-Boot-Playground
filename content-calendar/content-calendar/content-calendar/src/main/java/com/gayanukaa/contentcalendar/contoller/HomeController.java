@@ -15,11 +15,11 @@ public class HomeController {
 
     //Get value from application.properties into the controller
     //$ is SpEL spring expression language
-    @Value("${cc.welcomeMessage: Default Welcome Message}")
+    /*@Value("${cc.welcomeMessage: Default Welcome Message}")
     private String welcomeMessage;
 
     @Value("${cc.about}")
-    private String about;
+    private String about;*/
 
     /*
     @GetMapping("/")
@@ -29,9 +29,14 @@ public class HomeController {
     */
 
     //For multiple values
-    @GetMapping("/")
+    /*@GetMapping("/")
     public Map<String,String> home() {
         return Map.of("welcomeMessage", welcomeMessage, "about", about);
+    }*/
+
+    @GetMapping("/")
+    public String home() {
+        return null;
     }
 
 }
