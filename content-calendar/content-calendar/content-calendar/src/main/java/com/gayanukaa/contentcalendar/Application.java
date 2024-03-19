@@ -40,7 +40,7 @@ public class Application {
 	}
 
 	//DataLoader is a functional interface, so we can use a lambda expression
-	@Bean //To create an instance of a class using method
+	/*@Bean //To create an instance of a class using method
 	CommandLineRunner commandLineRunner(ContentRepository repository) {
 		//great place to do some bootstrapping - the process of initializing a system
 		//return args -> System.out.println("Hello");
@@ -60,6 +60,6 @@ public class Application {
 			);
 			repository.save(content);
 		};
-	}
+	}*/
 
 }
