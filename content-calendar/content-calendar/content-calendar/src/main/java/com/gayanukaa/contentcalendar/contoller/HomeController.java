@@ -1,13 +1,9 @@
 package com.gayanukaa.contentcalendar.contoller;
 
 
-import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Repository;
+import com.gayanukaa.contentcalendar.config.ContentCalendarProperties;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Map;
 
 //@RESTController - tells Spring that this class will be used to handle HTTP requests
 @RestController
@@ -34,9 +30,15 @@ public class HomeController {
         return Map.of("welcomeMessage", welcomeMessage, "about", about);
     }*/
 
+    private final ContentCalendarProperties properties;
+
+    public HomeController(ContentCalendarProperties properties) {
+        this.properties = properties;
+    }
+
     @GetMapping("/")
-    public String home() {
-        return null;
+    public ContentCalendarProperties home() {
+        return properties;
     }
 
 }
