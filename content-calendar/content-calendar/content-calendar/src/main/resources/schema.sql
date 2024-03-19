@@ -9,3 +9,7 @@ CREATE TABLE IF NOT EXISTS Content (
     url VARCHAR(255),
     primary key (id)
 );
+
+-- INSERT INTO Content (title, description, status, content_type, date_created)
+-- VALUES ('The First Post', 'This is the first post', 'IDEA', 'ARTICLE', CURRENT_TIMESTAMP());
+

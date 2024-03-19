@@ -1,3 +1,7 @@
+//Code has been commented out as it is not used in the project
+//This is after the implementation of the JdbcTemplateRepository
+
+/*
 package com.gayanukaa.contentcalendar.config;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -16,4 +20,6 @@ public class MyWebConfig {
     public RestTemplate restTemplate() {
         return new RestTemplateBuilder().build(); // return new instance of RestTemplate
     }
+
 }
+*/

@@ -2,6 +2,8 @@ package com.gayanukaa.contentcalendar.contoller;
 
 import com.gayanukaa.contentcalendar.model.Content;
 import com.gayanukaa.contentcalendar.repository.ContentColllectionRepository;
+import com.gayanukaa.contentcalendar.repository.ContentJdbcTemplateRepository;
+import com.gayanukaa.contentcalendar.repository.ContentRepository;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -28,12 +30,19 @@ public class ContentController {
     //We want to inject any dependencies that this controller has into the constructor as form of dependency injection.
     //We are dependent on this ContentColllectionRepository to work, so it is a dependency
 
-    private final ContentColllectionRepository repository;
+    //private final ContentColllectionRepository repositoryold;
     //final - Once created we don't want to change that
 
-    public ContentController(ContentColllectionRepository repository) {
+    //instead of using the above in memory repository, we are going to use the JdbcTemplateRepository
+    //private final ContentJdbcTemplateRepository repository;
+    //then match the code below to the JdbcTemplateRepository
+
+    private final ContentRepository repository;
+
+    public ContentController(ContentRepository repository) {
         this.repository = repository;
     }
+
 
     //make a request and find all the pieces of content in the system.
     @GetMapping("")
@@ -76,7 +85,13 @@ public class ContentController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Integer id) {
-        repository.delete(id);
+        repository.deleteById(id);
+    }
+
+    //for something specific (e.g. request from client)
+    @GetMapping("/filter/{keyword}")
+    public List<Content>findByTitle(@PathVariable String keyword) {
+        return null;
     }
 
 }
