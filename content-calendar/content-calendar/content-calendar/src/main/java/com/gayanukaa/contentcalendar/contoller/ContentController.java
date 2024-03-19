@@ -1,6 +1,7 @@
 package com.gayanukaa.contentcalendar.contoller;
 
 import com.gayanukaa.contentcalendar.model.Content;
+import com.gayanukaa.contentcalendar.model.Status;
 import com.gayanukaa.contentcalendar.repository.ContentColllectionRepository;
 import com.gayanukaa.contentcalendar.repository.ContentJdbcTemplateRepository;
 import com.gayanukaa.contentcalendar.repository.ContentRepository;
@@ -88,11 +89,17 @@ public class ContentController {
         repository.deleteById(id);
     }
 
+
     //for something specific (e.g. request from client)
     @GetMapping("/filter/{keyword}")
     public List<Content>findByTitle(@PathVariable String keyword) {
-        return null;
+        return repository.findAllByTitleContains(keyword);
     }
 
+
+    @GetMapping("/filter/status/{status}")
+    public List<Content>findByStatus(@PathVariable Status status) {
+        return repository.listByStatus(status);
+    }
 }
 
