@@ -1,71 +1,16 @@
-# Content Calendar
+<p    >
+  <img src="https://cdn-icons-png.flaticon.com/512/6295/6295417.png" width="100" />
+</p>
+<p>
+    <h1>Content Calendar</h1>
+</p>
 
-This project is a content calendar application built using Spring Boot. It allows users to manage and schedule content for various platforms.
-
-## Read Me First
-
-The following was discovered as part of building this project:
-
-- The original package name 'com.gayanukaa.content-calendar' is invalid and this project uses 'com.gayanukaa.contentcalendar' instead.
-
-## Features
-
-- User authentication: Users can create accounts and log in to the application.
-- Content creation: Users can create and manage content items, including title, description, and publication date.
-- Calendar view: Users can view their content items in a calendar format, making it easy to visualize and manage their publishing schedule.
-- Notifications: Users can receive notifications for upcoming content publication dates.
-- Search and filtering: Users can search for specific content items and filter them based on various criteria.
-
-## Installation
-
-1. Clone the repository: `git clone https://github.com/your-username/content-calendar.git`
-2. Navigate to the project directory: `cd content-calendar`
-3. Install dependencies: `mvn install`
-4. Configure the database connection in `application.properties`.
-5. Run the application: `mvn spring-boot:run`
-
-## Prerequisites
-
-Before running this application, make sure you have the following tools installed:
-
-- Java Development Kit (JDK) 8 or later
-- Apache Maven 3.6.1 or later
-
-## Building and Running the Application
-
-To build and run the application, follow these steps:
-
-1. Open a terminal or command prompt.
-2. Navigate to the project directory: `cd content-calendar`
-3. Build the application: `mvn clean package`
-4. Run the application: `java -jar target/content-calendar.jar`
-
-## Usage
-
-1. Open your web browser and navigate to `http://localhost:8080`.
-2. Sign up for a new account or log in with your existing credentials.
-3. Create content items by filling out the necessary fields and selecting a publication date.
-4. View and manage your content items in the calendar view.
-5. Use the search and filtering options to find specific content items.
-6. Receive notifications for upcoming publication dates.
-
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/your-feature-name`
-3. Make your changes and commit them: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin feature/your-feature-name`
-5. Submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Contact
-
-If you have any questions or suggestions, please feel free to reach out to us at [email@example.com](mailto:email@example.com).
+<p>
+ <img src="https://img.shields.io/github/license/Gayanukaa/Spring-Boot-Playground?style=flat&color=0080ff" alt="license">
+ <img src="https://img.shields.io/github/last-commit/Gayanukaa/Spring-Boot-Playground?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+ <img src="https://img.shields.io/github/languages/top/Gayanukaa/Spring-Boot-Playground?style=flat&color=0080ff" alt="repo-top-language">
+ <img src="https://img.shields.io/github/languages/count/Gayanukaa/Spring-Boot-Playground?style=flat&color=0080ff" alt="repo-language-count">
+<p>
 
 ## Getting Started
 
@@ -98,7 +43,7 @@ The application uses the following dependencies:
 
 - Spring Boot Web: for creating a web application
 - Spring Boot Data JPA: for managing database operations
-- Spring Boot DevTools: for faster application restart times during development
+- H2 Database: for storing content calendar entries
 
 The application also uses the following external libraries:
 
@@ -129,6 +74,45 @@ The application uses the `ContentRepository.java` interface to manage database o
 
 The `commandLineRunner` bean is used to perform bootstrapping tasks, such as inserting initial data into the database. This bean is defined using the `@Bean` annotation and is executed automatically when the application starts.
 
-## Conclusion
+## Project Roadmap
 
-This application provides a simple content calendar management system using Spring Boot and JPA. You can use this application as a starting point for building more complex content management systems.
+- [x] `► Initialise`
+- [x] `► Configure`
+- [ ] `► Production`
+
+## Contributing
+
+<details closed>
+    <summary>Contributing Guidelines</summary>
+
+1. **Fork the Repository**: Start by forking the project repository to your GitHub account.
+2. **Clone Locally**: Clone the forked repository to your local machine using a Git client.
+
+   ```sh
+   git clone https://github.com/Gayanukaa/Spring-Boot-Playground
+   ```
+
+3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
+
+   ```sh
+   git checkout -b new-feature-x
+   ```
+
+4. **Make Your Changes**: Develop and test your changes locally.
+5. **Commit Your Changes**: Commit with a clear message describing your updates.
+
+   ```sh
+   git commit -m 'Implemented new feature x.'
+   ```
+
+6. **Push to GitHub**: Push the changes to your forked repository.
+
+   ```sh
+   git push origin new-feature-x
+   ```
+
+7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
+
+Once your PR is reviewed and approved, it will be merged into the main branch.
+
+</details>
