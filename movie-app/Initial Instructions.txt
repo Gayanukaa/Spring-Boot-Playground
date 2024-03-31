@@ -1,0 +1,21 @@
+Java Version 17
+-----------------------------------------------------------
+Database
+
+Register on - https://www.mongodb.com/atlas/database
+
+Heirachy: Organization -> Project -> Database Cluster -> Create Users and Initialise IPs -> (After connecting to Compass) -> Create needed Database -> Create tables (called collections) -> Add data as JSON objects (movies.json file)
+
+-----------------------------------------------------------
+Initialise Project
+
+Project Build Automation Tool - Maven
+Java - 17
+Springboot - 3.1.10
+Packaging format - Jar (Java archive)
+
+Dependencies:
+	Lombok - Save space on annotations
+	Spring Web - Connecting with the web
+	Spring Data MongoDB - Interact with database
+	Spring Boot DevTools - Easier workflows
