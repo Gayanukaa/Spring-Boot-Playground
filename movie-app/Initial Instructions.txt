@@ -6,6 +6,8 @@ Register on - https://www.mongodb.com/atlas/database
 
 Heirachy: Organization -> Project -> Database Cluster -> Create Users and Initialise IPs -> (After connecting to Compass) -> Create needed Database -> Create tables (called collections) -> Add data as JSON objects (movies.json file)
 
+Database connection link: mongodb+srv://adminDB:adminDB@cluster0.vlhe8no.mongodb.net/
+
 -----------------------------------------------------------
 Initialise Project
 
