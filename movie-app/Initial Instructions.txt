@@ -21,3 +21,6 @@ Dependencies:
 	Spring Web - Connecting with the web
 	Spring Data MongoDB - Interact with database
 	Spring Boot DevTools - Easier workflows
+
+Additinal dependencies from: https://mvnrepository.com/
+	Spring dotenv - To read env files
